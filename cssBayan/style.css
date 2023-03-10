@@ -1,0 +1,32 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+*, *::before, *::after{
+    box-sizing:inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
+.wrapper{
+    padding: 10% 20%;
+}
+.detail-info{
+    width:80%;
+    height: 80%;
+    background-color:azure;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image__mem{
+    width:60%;
+    height: 80%;
+}

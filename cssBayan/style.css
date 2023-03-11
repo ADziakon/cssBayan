@@ -1,6 +1,9 @@
 html{
     box-sizing: border-box;
     scroll-behavior: smooth; 
+    width: 100vw;
+    overflow-x: hidden;
+
 }
 *{
     box-sizing:inherit;
@@ -21,10 +24,21 @@ body{
     width:90%;
     padding: 5% 20%;
 }
+
 .bayan__title{
     color:blue;
+    cursor: pointer;
     font-weight: 700;
     font-size: 1.5em;
+    background: url(./assets/image/plus-solid.svg);
+    background-repeat:no-repeat;
+    background-size: 50%;
+    display: block;
+    transition: color .35s;
+}
+
+.bayan__title:hover{
+    color:black;
 }
 .detail-info{
     width:80%;
@@ -35,44 +49,38 @@ body{
     justify-content: space-between;
     flex-direction: column;
 }
-.text__mem{
-    padding-top: 10px;
-    font-size: 1.5em;
-    font-weight: 700;
-}
+
 .image__mem{
     width:60%;
     height: 80%;
 }
 
-.bayan__item .detail-info {
+.detail-info {
     width: 100%;
     height: 0;
-    box-sizing: border-box;
-    transition: color 0.5s, padding 0.5s;
+    transition: 0.5s;
     overflow: hidden; 
+
 }
-.bayan__item label {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 100;
-    transition: color .35s;
-}
-.bayan__item input{
+
+.bayan__radio{
     display: none;
 }
 
-.bayan__title input:checked + label + .detail-info {
+.bayan__radio:checked + label + .detail-info {
     padding-bottom: 15px;
 }
 
-.bayan__item input:checked + label + .detail-info {
+.bayan__radio:checked ~ .detail-info {
     height: auto;
     overflow: visible;
+    transition: 0.5s;
 }
-.bayan__item input + label:hover + .detail-info {
+.bayan__radio:checked ~ .bayan__title {
+    color:black;
+}
+.bayan__title:hover + .detail-info {
     height: auto;
     overflow: visible;
+    transition: 0.5s;
 }

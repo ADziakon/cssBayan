@@ -30,9 +30,6 @@ body{
     cursor: pointer;
     font-weight: 700;
     font-size: 1.5em;
-    background: url(./assets/image/plus-solid.svg);
-    background-repeat:no-repeat;
-    background-size: 50%;
     display: block;
     transition: color .35s;
 }
@@ -60,7 +57,6 @@ body{
     height: 0;
     transition: 0.5s;
     overflow: hidden; 
-
 }
 
 .bayan__radio{
@@ -79,8 +75,37 @@ body{
 .bayan__radio:checked ~ .bayan__title {
     color:black;
 }
+.wrapper:hover label{
+    background: url(./assets/image/plus-solid.svg) right;
+    background-repeat:no-repeat;
+}
 .bayan__title:hover + .detail-info {
     height: auto;
     overflow: visible;
-    transition: 0.5s;
+    transition: 0.35s;
+    
+}
+@media screen and (max-width:820px){
+    .wrapper{
+        padding: 3% 5%;
+    }
+    .main__title{
+        font-size: 1.5em;
+    }
+    .bayan__title{
+        font-weight: 700;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:320px){
+    .wrapper{
+        padding: 3% 5%;
+    }
+    .main__title{
+        font-size: 1.2em;
+    }
+    .bayan__title{
+        font-weight: 700;
+        font-size: 0.9em;
+    }
 }

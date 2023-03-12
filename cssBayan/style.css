@@ -76,6 +76,26 @@ body{
 .bayan__radio:checked ~ .bayan__title {
     color:black;
 }
+.bayan__title:active, .bayan__title:focus {
+    color:black;
+}
+.detail-info:active, .detail-info:focus{
+    cursor: pointer;
+}
+.bayan__title:active, .bayan__title:focus  + .detail-info { 
+    height: auto;
+    overflow: visible;
+    transition: 3s;  
+    opacity: 1;
+    animation-name: moveRightLeft;
+    animation-duration: 3s;
+}
+.wrapper:active, .wrapper:focus .bayan__radio:checked ~ .bayan__title {
+    color:blue;
+}
+.wrapper:active, .wrapper:focus label{
+    color:#000000;
+}
 
 @media (hover: hover){
     @keyframes moveToBig {
@@ -98,7 +118,7 @@ body{
         background-size: 4%;
         transition: right 3s;
     }
-    .bayan__title:hover + .detail-info { 
+    .bayan__title:hover  + .detail-info { 
         height: auto;
         overflow: visible;
         transition: 3s;  
@@ -107,36 +127,33 @@ body{
         animation-duration: 3s;
     }
 
-    .bayan__title:hover{
+    .bayan__title:hover {
         color:black;
     }
     .detail-info:hover{
         cursor: pointer;
     }
 
-    
 }
 @media screen and (max-width:820px){
     .wrapper{
-        padding: 3% 5%;
+        margin: 3% 5%;
     }
     .main__title{
         font-size: 1.5em;
     }
     .bayan__title{
-        font-weight: 700;
         font-size: 1em;
     }
 }
 @media screen and (max-width:320px){
     .wrapper{
-        padding: 3% 5%;
+        margin: 3% 5%;
     }
     .main__title{
         font-size: 1.2em;
     }
     .bayan__title{
-        font-weight: 700;
         font-size: 0.9em;
     }
 }

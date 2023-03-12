@@ -34,9 +34,7 @@ body{
     transition: color .35s;
 }
 
-.bayan__title:hover{
-    color:black;
-}
+
 .detail-info{
     width:80%;
     height: 80%;
@@ -48,8 +46,8 @@ body{
 }
 
 .image__mem{
-    width:60%;
-    height: 80%;
+    width:40%;
+    height: 40%;
 }
 
 .detail-info {
@@ -75,15 +73,20 @@ body{
 .bayan__radio:checked ~ .bayan__title {
     color:black;
 }
-.wrapper:hover label{
-    background: url(./assets/image/plus-solid.svg) right;
-    background-repeat:no-repeat;
-}
-.bayan__title:hover + .detail-info {
-    height: auto;
-    overflow: visible;
-    transition: 0.35s;
-    
+@media (hover: hover){
+    .bayan__title:hover + .detail-info {
+        height: auto;
+        overflow: visible;
+        /* transition: 0.35s;   */
+        transform: scale(1);
+    }
+    .wrapper:hover label{
+        background: url(./assets/image/plus-solid.svg) right;
+        background-repeat: no-repeat;
+    }
+    .bayan__title:hover{
+        color:black;
+    }
 }
 @media screen and (max-width:820px){
     .wrapper{
